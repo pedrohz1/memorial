@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100dvh;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Container para dar perspectiva 3D ao livro */
+.book-container {
+    perspective: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* O Livro (Abre para a esquerda, então deslocamos o eixo) */
+.book {
+    position: relative;
+    height: 60vh;
+    width: 45vh; /* Proporção de página vertical */
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+/* Configuração de cada folha */
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* Lados da folha (Frente e Verso) */
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden; /* Esconde o verso quando virado */
+    border: 1px solid #ddd;
+    border-radius: 0 10px 10px 0;
+}
+
+/* O verso da página precisa ser espelhado */
+.back {
+    transform: rotateY(180deg);
+    border-radius: 10px 0 0 10px;
+    background-color: #fafafa;
+}
+
+/* Classe aplicada via JS quando a página é virada */
+.page.flipped {
+    transform: rotateY(-180deg);
+}

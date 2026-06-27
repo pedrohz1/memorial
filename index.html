@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipbook Interativo 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="book-container">
+        <div id="flipbook" class="book">
+            
+            <!-- PÁGINA 1: Capa -->
+            <div class="page turned" id="p1" style="z-index: 3; background-color: brown; border-radius: 10px">
+                <div class="front" style=" background-color: brown;"><h1>Clique aqui</h1></div>
+                <div class="back">
+                    <p>É muito difícil dizer os motivos para ser quem somos. Diversos fatores nos moldam ao longo da vida, gerando personalidades únicas e extremamente complexas de se analisar. Nesse breve "livro", apresento os motivos que eu acredito que me trouxeram a ser quem sou:</p>
+                </div>
+            </div>
+
+            <!-- PÁGINA 2: Miolo -->
+            <div class="page" id="p2" style="z-index: 2;">
+                <div class="front">
+                    <h2>1. Família</h1>
+                    <p>Com certeza o maior fator na minha formação foi e continua sendo minha família. Deles vieram meus modos, lições, ideais, minha forma de ver o mundo, etc. Sempre presentes de forma muito forte, a convivência me fez replicar vários traços, os quais vou levar comigo o resto da vida.</p>
+                </div>
+                <div class="back">
+                    <h2>2. Fé</h2>
+                    <p>Desde muito novo, fui levado a igreja católica. Lá, aprendi muitas virtudes, ensinamentos, e principalmente, a ter empatia em qualquer situação. Considero isso traço forte da minha personalidade: antes de agir, penso primeiro em como essa ação vai afetar o outro. Ultimamente, com a vida tão movimentada, tenho estado afastado, mas nunca perdi o hábito de orar. Pretendo voltar logo que possível.</p>
+                </div>
+            </div>
+
+            <!-- PÁGINA 3: Contra-capa -->
+            <div class="page" id="p3" style="z-index: 1;">
+                <div class="front">
+                    <h2>3. Amigos</h2>
+                    <p>Por mais que não tenha um amigo específico que eu queira mencionar, pra mim é inegável a forte influência</p>
+                </div>
+                <div class="back">
+                    <h2>Contracapa</h2>
+                    <p>Obrigado por ler!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
